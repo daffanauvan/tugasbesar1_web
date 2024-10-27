@@ -1,214 +1,142 @@
-   .profile-card {
-            background: rgba(48, 52, 57, 0.9);
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
 
-        .profile-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+header {
+    background-color: #000000bb;
+    color: rgb(248, 248, 248);
+    padding: 23px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
+header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
 
-        .profile-name {
-            margin: 15px 0 5px;
-            color: #333;
-        }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .profile-title {
-            color: #f6f2f2;
-            font-style: italic;
-        }
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-        .profile-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
+nav ul li a {
+    color: rgb(232, 232, 232);
+    text-decoration: none;
+}
 
-        .detail-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
-            background: rgba(42, 254, 0, 0.815);
-            border-radius: 8px;
-        }
+.page {
+    display: none;
+    padding-top: 120px;
+    min-height: calc(100vh - 120px);
+}
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
+.page.active {
+    display: block;
+}
 
-        .social-links a {
-            color: #00ff40;
-            font-size: 24px;
-            transition: color 0.3s;
-        }
+section {
+    margin: 1px;
+    padding: 1px;
+    background-color: #00aaffcc;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(55, 49, 49, 0.016);
+}
 
-        .social-links a:hover {
-            color: #4CAF50;
-        }
+.foto-diri {
+    text-align: center;
+}
 
-        .about-me {
-            background: rgba(48, 52, 57, 0.9);
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
+.foto-diri img {
+    border-radius: 10%;
+    margin: 20px auto;
+    display: block;
+    max-width: 200px;
+}
 
-        header {
-            background-color: #000000bb;
-            color: rgb(248, 248, 248);
-            padding: 23px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+.bio {
+    margin-top: 20px;
+}
 
-        header h1 {
-            margin: 0;
-            padding: 10px 0;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+}
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+th, td {
+    border: 1px solid #00ff62;
+    padding: 12px;
+    text-align: left;
+}
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+th {
+    background-color: #61796e6;
+    color: white;
+}
 
-        nav ul li a {
-            color: rgb(232, 232, 232);
-            text-decoration: none;
-        }
+tr:nth-child(even) {
+    background-color: #fefefe;
+}
 
-        .page {
-            display: none;
-            padding-top: 120px;
-            min-height: calc(100vh - 120px);
-        }
+.semester-nav {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        .page.active {
-            display: block;
-        }
+.semester-nav button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #00ff5e;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        section {
-            margin: 1px;
-            padding: 1px;
-            background-color: #00aaffcc;
-            border-radius: 0px;
-            box-shadow: 0 0 10px rgba(55, 49, 49, 0.016);
-        }
+.semester-nav button:hover {
+    background-color: #006aac;
+}
 
-        .foto-diri {
-            text-align: center;
-        }
+.fade {
+    animation: fadeEffect 1s;
+}
 
-        .foto-diri img {
-            border-radius: 10%;
-            margin: 20px auto;
-            display: block;
-            max-width: 200px;
-        }
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
-        .bio {
-            margin-top: 20px;
-        }
+.info-kuliah {
+    text-align: center;
+    padding: 20px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: rgb(255, 255, 255);
-        }
+.info-box {
+    background-color: #ffffffd6;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-        th, td {
-            border: 1px solid #00ff62;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #61796e6;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #fefefe;
-        }
-
-        .semester-nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .semester-nav button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            background-color: #00ff5e;
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .semester-nav button:hover {
-            background-color: #006aac;
-        }
-
-        .fade {
-            animation: fadeEffect 1s;
-        }
-
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        .info-kuliah {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .info-box {
-            background-color: #ffffffd6;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .info-box h3 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
+.info-box h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
